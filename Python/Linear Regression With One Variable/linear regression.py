@@ -45,7 +45,7 @@ def gradientDecent(m,c):
 squareMeanErrors=[]
 
 
-# Linear Regretion function to find Sqare Mean Errors
+# Linear Regression function to find Sqare Mean Errors
 
 def costFunction(m,c):
 	squareMeanErrorsTemp=[]
