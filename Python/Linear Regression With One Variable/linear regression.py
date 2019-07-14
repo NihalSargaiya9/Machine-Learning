@@ -23,9 +23,8 @@ areas = [((area- meanAreas)/rArea) for area in areas]
 # Gradient Decent
 
 def gradientDecent(m,c):
-	it=0
 	sameIt=0
-	while True:
+	for _ in range(itterations):
 		temp0=0
 		temp1=0
 		for x,y in zip(areas,prices):
@@ -37,9 +36,6 @@ def gradientDecent(m,c):
 		c=c-(learn*(temp0/len(prices)))
 		costFunction(m,c)
 		
-		if(it>6000):
-			break
-		it+=1
 	return m,c
 
 squareMeanErrors=[]
@@ -75,6 +71,7 @@ m =1										# Slope (Can be any value)
 c = 2										# Intercept (Can be any value)
 
 learn = 0.007								# Learning Rate
+itterations=6000
 
 print("Learning ... (Please wait)")
 
